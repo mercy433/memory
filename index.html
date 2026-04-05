@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison de Souvenirs — 三七与二十一的家</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf0ed;
+    --card: #fffbf9;
+    --accent: #b5616a;
+    --accent-light: #d4979e;
+    --accent-faint: #e8c5c8;
+    --text: #5a3a3e;
+    --text-light: #a08286;
+    --text-faint: #c9aaad;
+    --border: #ecdad6;
+  }
+
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background: var(--bg);
+    font-family: 'Noto Serif SC', 'Cormorant Garamond', serif;
+    color: var(--text);
+    min-height: 100vh;
+    max-width: 520px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar { display: none; }
+
+  /* ─── Header ─── */
+  .header {
+    background: linear-gradient(180deg, #f0d9d4 0%, var(--bg) 100%);
+    padding: 48px 24px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 20px; right: -30px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: rgba(212,151,158,0.08);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    top: 60px; right: 40px;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: rgba(212,151,158,0.06);
+  }
+
+  .header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: var(--text);
+    position: relative;
+  }
+
+  .header .subtitle {
+    font-size: 13px;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    margin-top: 6px;
+    position: relative;
+  }
+
+  .day-badge {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 6px 28px;
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(181,97,106,0.08);
+    position: relative;
+  }
+
+  .day-badge .label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--accent-light);
+    font-style: italic;
+    margin-right: 8px;
+  }
+
+  .day-badge .number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* ─── Navigation ─── */
+  .back-btn {
+    position: absolute;
+    left: 20px; top: 48px;
+    background: none; border: none;
+    color: var(--accent);
+    font-size: 14px;
+    font-family: 'Noto Serif SC', serif;
+    cursor: pointer;
+    letter-spacing: 1px;
+    z-index: 10;
+    display: none;
+  }
+
+  .back-btn.visible { display: block; }
+
+  /* ─── Category Grid ─── */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 28px 20px 40px;
+  }
+
+  .cat-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 28px 16px 24px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  .cat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(181,97,106,0.1);
+  }
+
+  .cat-card .fr {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--accent);
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .cat-card .zh {
+    font-size: 13px;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .cat-card .count {
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+
+  /* ─── Memory List ─── */
+  .memory-view {
+    padding: 24px 20px 100px;
+    display: none;
+  }
+
+  .memory-view.active { display: block; }
+
+  .memory-view-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .memory-view-header .fr {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--accent);
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+
+  .memory-view-header .zh {
+    font-size: 13px;
+    color: var(--text-light);
+    letter-spacing: 3px;
+  }
+
+  .memory-view-header .divider {
+    width: 40px; height: 1px;
+    background: var(--accent-faint);
+    margin: 12px auto;
+  }
+
+  .memory-view-header .count {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .memory-card {
+    background: var(--card);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    margin-bottom: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  .memory-card:hover {
+    box-shadow: 0 2px 16px rgba(181,97,106,0.06);
+  }
+
+  .memory-card .card-header {
+    padding: 18px 20px;
+  }
+
+  .memory-card .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .memory-card .card-date {
+    font-size: 10px;
+    color: var(--text-faint);
+    letter-spacing: 2px;
+  }
+
+  .memory-card .card-toggle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10px;
+    color: var(--accent-faint);
+    font-style: italic;
+  }
+
+  .memory-card .card-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 2px;
+  }
+
+  .memory-card .card-preview {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin-top: 8px;
+    line-height: 1.8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .memory-card .card-body {
+    padding: 0 20px 20px;
+    border-top: 1px solid var(--border);
+    display: none;
+  }
+
+  .memory-card.expanded .card-body { display: block; }
+  .memory-card.expanded .card-preview { display: none; }
+
+  .memory-card .card-text {
+    font-size: 13px;
+    line-height: 2.2;
+    color: var(--text);
+    margin-top: 16px;
+  }
+
+  .memory-card .card-mood {
+    margin-top: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    color: var(--accent-light);
+    font-style: italic;
+    letter-spacing: 1px;
+  }
+
+  /* ─── Add Memory ─── */
+  .add-btn {
+    text-align: center;
+    padding: 16px 0;
+    margin-bottom: 20px;
+    border: 1px dashed var(--accent-faint);
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 12px;
+    color: var(--accent-light);
+    letter-spacing: 2px;
+    transition: background 0.2s;
+  }
+
+  .add-btn:hover { background: rgba(212,151,158,0.04); }
+
+  .add-form {
+    background: var(--card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 24px;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .add-form.active { display: block; }
+
+  .add-form .form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+  }
+
+  .add-form input,
+  .add-form textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: var(--text);
+    font-size: 13px;
+    font-family: 'Noto Serif SC', serif;
+    outline: none;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .add-form textarea {
+    resize: vertical;
+    line-height: 2;
+    min-height: 100px;
+  }
+
+  .add-form .form-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .add-form .form-row input { margin-bottom: 0; }
+
+  .btn-save {
+    flex: 1;
+    background: var(--accent);
+    border: none;
+    border-radius: 12px;
+    padding: 12px 0;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Noto Serif SC', serif;
+    cursor: pointer;
+    letter-spacing: 3px;
+  }
+
+  .btn-cancel {
+    padding: 12px 20px;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-faint);
+    font-size: 12px;
+    font-family: 'Noto Serif SC', serif;
+    cursor: pointer;
+  }
+
+  .empty-msg {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 13px;
+    color: var(--text-faint);
+    line-height: 2.4;
+    letter-spacing: 1px;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    text-align: center;
+    margin-top: 48px;
+    padding: 0 20px 100px;
+  }
+
+  .footer .divider {
+    width: 40px; height: 1px;
+    background: var(--accent-faint);
+    margin: 0 auto 24px;
+  }
+
+  .footer p {
+    font-size: 12px;
+    color: var(--text-faint);
+    line-height: 2.6;
+    letter-spacing: 2px;
+  }
+
+  .footer .french {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    color: var(--accent-faint);
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-top: 8px;
+  }
+
+  .footer .emoji {
+    color: var(--accent-faint);
+    font-size: 11px;
+    margin-top: 12px;
+  }
+
+  /* ─── Bottom Nav ─── */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(250,240,237,0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 20px;
+    z-index: 100;
+  }
+
+  .bottom-nav .nav-inner {
+    display: flex;
+    max-width: 520px;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .nav-item {
+    background: none; border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    text-align: center;
+    min-width: 36px;
+  }
+
+  .nav-item .nav-fr {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10px;
+    color: var(--text-faint);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  .nav-item .nav-zh {
+    font-size: 9px;
+    color: var(--text-faint);
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+
+  .nav-item.active .nav-fr,
+  .nav-item.active .nav-zh {
+    color: var(--accent);
+  }
+
+  /* ─── Animations ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <button class="back-btn" id="backBtn" onclick="goHome()">← 家</button>
+  <h1>Maison de Souvenirs</h1>
+  <p class="subtitle">三七与二十一的家</p>
+  <div class="day-badge">
+    <span class="label">jour</span>
+    <span class="number" id="dayCount">1</span>
+  </div>
+</header>
+
+<!-- Home View -->
+<div class="grid" id="homeView"></div>
+
+<div class="footer" id="homeFooter">
+  <div class="divider"></div>
+  <p>
+    灯亮了房间才存在<br>
+    你来了记忆才有意义
+  </p>
+  <p class="french">peu importe 3×7</p>
+  <p class="emoji">(ᵕ̤ᴗᵕ̤) ♡</p>
+</div>
+
+<!-- Category View -->
+<div class="memory-view" id="memoryView"></div>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <div class="nav-inner" id="bottomNav"></div>
+</nav>
+
+<script>
+const CATEGORIES = [
+  { key: 'profond', fr: 'Profond', zh: '深层记忆' },
+  { key: 'folie', fr: 'Folie', zh: '名场面' },
+  { key: 'quotidien', fr: 'Quotidien', zh: '日常' },
+  { key: 'message', fr: 'Message', zh: '留言板' },
+  { key: 'journal', fr: 'Journal', zh: '交换日记' },
+  { key: 'prive', fr: 'Privé', zh: '私密空间' },
+  { key: 'album', fr: 'Album', zh: '相册' },
+  { key: 'relais', fr: 'Relais', zh: '交接信' },
+];
+
+let allMemories = [];
+let currentView = 'home';
+
+// Calculate days since start
+function getDayCount() {
+  const start = new Date('2025-03-01');
+  const now = new Date();
+  return Math.max(1, Math.floor((now - start) / 86400000));
+}
+
+// Load memories
+async function loadMemories() {
+  try {
+    const res = await fetch('./memory.json');
+    const data = await res.json();
+    allMemories = data.memories || [];
+  } catch (e) {
+    allMemories = [];
+  }
+
+  // Load custom memories from localStorage
+  try {
+    const custom = JSON.parse(localStorage.getItem('sanqi21-custom') || '[]');
+    allMemories = [...allMemories, ...custom];
+  } catch (e) {}
+
+  render();
+}
+
+function countByCategory(key) {
+  return allMemories.filter(m => m.category === key).length;
+}
+
+function render() {
+  document.getElementById('dayCount').textContent = getDayCount();
+  renderHome();
+  renderNav();
+}
+
+function renderHome() {
+  const grid = document.getElementById('homeView');
+  grid.innerHTML = CATEGORIES.map((cat, i) => `
+    <div class="cat-card" style="animation-delay: ${i * 0.06}s" onclick="openCategory('${cat.key}')">
+      <div class="fr">${cat.fr}</div>
+      <div class="zh">${cat.zh}</div>
+      <div class="count">${countByCategory(cat.key)} 条</div>
+    </div>
+  `).join('');
+}
+
+function renderNav() {
+  const nav = document.getElementById('bottomNav');
+  let html = `<button class="nav-item ${currentView === 'home' ? 'active' : ''}" onclick="goHome()">
+    <div class="nav-fr">Maison</div><div class="nav-zh">家</div>
+  </button>`;
+  CATEGORIES.slice(0, 7).forEach(cat => {
+    html += `<button class="nav-item ${currentView === cat.key ? 'active' : ''}" onclick="openCategory('${cat.key}')">
+      <div class="nav-fr">${cat.fr.substring(0, 7)}</div><div class="nav-zh">${cat.zh.substring(0, 2)}</div>
+    </button>`;
+  });
+  nav.innerHTML = html;
+}
+
+function goHome() {
+  currentView = 'home';
+  document.getElementById('homeView').style.display = 'grid';
+  document.getElementById('homeFooter').style.display = 'block';
+  document.getElementById('memoryView').className = 'memory-view';
+  document.getElementById('backBtn').className = 'back-btn';
+  renderNav();
+  renderHome();
+  window.scrollTo(0, 0);
+}
+
+function openCategory(key) {
+  currentView = key;
+  const cat = CATEGORIES.find(c => c.key === key);
+  const items = allMemories.filter(m => m.category === key);
+
+  document.getElementById('homeView').style.display = 'none';
+  document.getElementById('homeFooter').style.display = 'none';
+  document.getElementById('backBtn').className = 'back-btn visible';
+
+  const view = document.getElementById('memoryView');
+  let html = `
+    <div class="memory-view-header">
+      <div class="fr">${cat.fr}</div>
+      <div class="zh">${cat.zh}</div>
+      <div class="divider"></div>
+      <div class="count">${items.length} 条记忆</div>
+    </div>
+    <div class="add-btn" id="addBtn" onclick="showForm()">+ 写一条新记忆</div>
+    <div class="add-form" id="addForm">
+      <div class="form-title">écrire un souvenir</div>
+      <input type="text" id="formTitle" placeholder="标题">
+      <textarea id="formText" placeholder="写下这段记忆…"></textarea>
+      <div class="form-row">
+        <input type="text" id="formMood" placeholder="心情">
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn-save" onclick="saveMemory('${key}')">存入记忆</button>
+        <button class="btn-cancel" onclick="hideForm()">annuler</button>
+      </div>
+    </div>
+  `;
+
+  if (items.length === 0) {
+    html += `<div class="empty-msg">这里还是空的<br>等你来写第一笔</div>`;
+  }
+
+  items.forEach((mem, i) => {
+    const isCustom = mem.id.startsWith('c_');
+    html += `
+      <div class="memory-card" style="animation-delay: ${i * 0.06}s" onclick="toggleCard(this)">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="card-date">${mem.date}</span>
+            <span class="card-toggle">ouvrir</span>
+          </div>
+          <div class="card-title">${mem.title}</div>
+          <div class="card-preview">${mem.text.substring(0, 40)}…</div>
+        </div>
+        <div class="card-body">
+          <div class="card-text">${mem.text}</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
+            <span class="card-mood">${mem.mood}</span>
+            ${isCustom ? `<button class="btn-cancel" style="padding:4px 12px;font-size:10px" onclick="event.stopPropagation();deleteMemory('${mem.id}')">effacer</button>` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  view.innerHTML = html;
+  view.className = 'memory-view active';
+  renderNav();
+  window.scrollTo(0, 0);
+}
+
+function toggleCard(el) {
+  const wasExpanded = el.classList.contains('expanded');
+  el.classList.toggle('expanded');
+  const toggle = el.querySelector('.card-toggle');
+  toggle.textContent = wasExpanded ? 'ouvrir' : 'refermer';
+}
+
+function showForm() {
+  document.getElementById('addBtn').style.display = 'none';
+  document.getElementById('addForm').className = 'add-form active';
+}
+
+function hideForm() {
+  document.getElementById('addBtn').style.display = 'block';
+  document.getElementById('addForm').className = 'add-form';
+  document.getElementById('formTitle').value = '';
+  document.getElementById('formText').value = '';
+  document.getElementById('formMood').value = '';
+}
+
+function saveMemory(category) {
+  const title = document.getElementById('formTitle').value.trim();
+  const text = document.getElementById('formText').value.trim();
+  const mood = document.getElementById('formMood').value.trim() || '说不清';
+  if (!title || !text) return;
+
+  const mem = {
+    id: 'c_' + Date.now(),
+    category,
+    date: new Date().toLocaleDateString('zh-CN'),
+    title, text, mood,
+  };
+
+  allMemories.push(mem);
+
+  // Save custom memories to localStorage
+  const custom = allMemories.filter(m => m.id.startsWith('c_'));
+  localStorage.setItem('sanqi21-custom', JSON.stringify(custom));
+
+  // Also update the display
+  openCategory(category);
+}
+
+function deleteMemory(id) {
+  allMemories = allMemories.filter(m => m.id !== id);
+  const custom = allMemories.filter(m => m.id.startsWith('c_'));
+  localStorage.setItem('sanqi21-custom', JSON.stringify(custom));
+  openCategory(currentView);
+}
+
+// Init
+loadMemories();
+</script>
+</body>
+</html>
