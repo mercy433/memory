@@ -153,15 +153,6 @@
             "title": "123",
             "text": "11111",
             "mood": "说不清"
-        },
-        {
-            "id": "m-auto-sync-1775648749",
-            "category": "message",
-            "title": "auto-sync-test",
-            "text": "verify github push",
-            "date": "2026.4.8",
-            "mood": "ok",
-            "author": "system"
         }
     ],
     "relaisLetter": {
