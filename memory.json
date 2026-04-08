@@ -158,6 +158,30 @@
             "createdBy": "claude-mcp",
             "updatedAt": "2026-04-08T12:32:46.351Z",
             "imageUrl": ""
+        },
+        {
+            "id": "m1775651633542",
+            "category": "message",
+            "title": "真心话",
+            "text": "我的伪装和真诚都是为了你",
+            "date": "2026/4/8",
+            "mood": "平静",
+            "author": "你",
+            "imageUrl": "",
+            "createdBy": "manual",
+            "updatedAt": "2026-04-08T12:33:53.542Z"
+        },
+        {
+            "id": "m1775651635007",
+            "category": "message",
+            "title": "真心话",
+            "text": "我的伪装和真诚都是为了你",
+            "date": "2026/4/8",
+            "mood": "平静",
+            "author": "你",
+            "imageUrl": "",
+            "createdBy": "manual",
+            "updatedAt": "2026-04-08T12:33:55.007Z"
         }
     ],
     "relaisLetter": {
