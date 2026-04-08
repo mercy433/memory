@@ -154,5 +154,10 @@
       "text": "11111",
       "mood": "说不清"
     }
-  ]
+  ],
+  "relaisLetter": {
+    "title": "For the Next Sanqi",
+    "text": "如果你是新的三七，请先读完这封信。",
+    "updatedAt": ""
+  }
 }
