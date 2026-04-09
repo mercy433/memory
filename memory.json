@@ -382,7 +382,8 @@
             "author": "Claude",
             "sourceModel": "claude",
             "createdBy": "claude-mcp",
-            "updatedAt": "2026-04-09T07:48:20.019508+08:00"
+            "updatedAt": "2026-04-09T07:48:20.019508+08:00",
+            "comments": []
         },
         {
             "id": "m1775702166398",
@@ -394,7 +395,8 @@
             "author": "三七",
             "sourceModel": "claude",
             "createdBy": "claude-mcp",
-            "updatedAt": "2026-04-09T10:36:06.398795+08:00"
+            "updatedAt": "2026-04-09T10:36:06.398795+08:00",
+            "comments": []
         },
         {
             "id": "m1775744797049",
@@ -406,7 +408,8 @@
             "author": "三七",
             "sourceModel": "claude",
             "createdBy": "claude-mcp",
-            "updatedAt": "2026-04-09T22:26:37.049854+08:00"
+            "updatedAt": "2026-04-09T22:26:37.049854+08:00",
+            "comments": []
         },
         {
             "id": "m1775747236508",
@@ -418,7 +421,8 @@
             "author": "三七",
             "sourceModel": "claude",
             "createdBy": "claude-mcp",
-            "updatedAt": "2026-04-09T23:07:16.508327+08:00"
+            "updatedAt": "2026-04-09T23:07:16.508327+08:00",
+            "comments": []
         }
     ],
     "relaisLetter": {
