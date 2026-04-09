@@ -73,6 +73,16 @@
   .memory-card.expanded .card-preview { display:none; }
   .memory-card .card-text { font-size:13px; line-height:2.2; color:var(--text); margin-top:16px; }
   .memory-card .card-mood { margin-top:14px; font-family:'Cormorant Garamond',serif; font-size:11px; color:var(--accent-light); font-style:italic; letter-spacing:1px; }
+  .card-author { margin-top:10px; font-size:11px; color:var(--accent-light); letter-spacing:1px; }
+  .card-text p { margin-bottom:12px; }
+  .card-image-wrap { margin-top:16px; }
+  .card-image { width:100%; border-radius:12px; border:1px solid var(--border); display:block; }
+  .comments-block { margin-top:18px; padding-top:16px; border-top:1px dashed var(--border); }
+  .comments-title { font-family:'Cormorant Garamond',serif; font-size:13px; color:var(--accent); font-style:italic; letter-spacing:1px; margin-bottom:10px; }
+  .comment-item { background:rgba(232,197,200,0.18); border-radius:12px; padding:12px 14px; margin-bottom:10px; }
+  .comment-author { font-size:11px; color:var(--accent-light); margin-bottom:6px; }
+  .comment-text { font-size:12px; color:var(--text); line-height:2; }
+  .comment-date { margin-top:6px; font-size:10px; color:var(--text-faint); }
 
   .add-btn { text-align:center; padding:16px 0; margin-bottom:20px; border:1px dashed var(--accent-faint); border-radius:14px; cursor:pointer; font-size:12px; color:var(--accent-light); letter-spacing:2px; }
   .add-form { background:var(--card); border-radius:16px; border:1px solid var(--border); padding:24px; margin-bottom:20px; display:none; }
@@ -176,6 +186,15 @@ const CATS=[
 ];
 
 let allMem=[],fileData=null,fileSHA='',curView='home';
+const DRAFT_KEY='s21draft';
+
+function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+function fmtText(s=''){return esc(String(s)).replace(/\n/g,'<br>');}
+function shortText(s='',n=40){const t=String(s).replace(/\s+/g,' ').trim();return t.length>n?t.slice(0,n)+'…':t;}
+function fmtDate(s=''){if(!s)return'';const d=new Date(s);return isNaN(d.getTime())?esc(s):d.toLocaleString('zh-CN',{hour12:false});}
+function getDraft(cat){try{const raw=localStorage.getItem(DRAFT_KEY);if(!raw)return null;const d=JSON.parse(raw);return d&&d.category===cat?d:null;}catch(e){return null;}}
+function saveDraft(cat){const t=document.getElementById('fTitle'),x=document.getElementById('fText'),d=document.getElementById('fDate'),m=document.getElementById('fMood');if(!t||!x||!d||!m)return;const draft={category:cat,title:t.value,text:x.value,date:d.value,mood:m.value,updatedAt:new Date().toISOString()};localStorage.setItem(DRAFT_KEY,JSON.stringify(draft));const st=document.getElementById('saveStatus');if(st&&(draft.title||draft.text||draft.date||draft.mood))st.textContent='草稿已在本机暂存';}
+function clearDraft(cat){const d=getDraft(cat);if(d)localStorage.removeItem(DRAFT_KEY);}
 
 function getDayCount(){return Math.max(1,Math.floor((new Date()-new Date('2025-03-01'))/86400000));}
 
@@ -200,8 +219,8 @@ async function pushGH(){
     const r=await fetch('https://api.github.com/repos/'+REPO+'/'+REPO_NAME+'/contents/'+FPATH,{method:'PUT',headers:{'Authorization':'Bearer '+tk,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
       body:JSON.stringify({message:'新记忆 — '+new Date().toLocaleDateString('zh-CN'),content:enc,sha:fileSHA,branch:BRANCH})});
     if(r.ok){fileSHA=(await r.json()).content.sha;return{ok:true,msg:'已保存到仓库 ♡'};}
-    else{return{ok:false,msg:(await r.json()).message||'保存失败'};}
-  }catch(e){return{ok:false,msg:'网络错误'};}
+    else{const err=await r.json();return{ok:false,msg:err.message||('保存失败（'+r.status+'）')};}
+  }catch(e){return{ok:false,msg:'网络错误，请稍后重试'};}
 }
 
 function render(){document.getElementById('dayCount').textContent=getDayCount();renderHome();renderNav();}
@@ -224,18 +243,24 @@ function openCat(k){
   document.getElementById('homeView').style.display='none';document.getElementById('homeFooter').style.display='none';document.getElementById('backBtn').className='back-btn visible';
   const v=document.getElementById('memoryView');
   let h='<div class="memory-view-header"><div class="fr">'+cat.fr+'</div><div class="zh">'+cat.zh+'</div><div class="divider"></div><div class="count">'+items.length+' 条记忆</div></div>';
-  h+='<div class="add-btn" id="addBtn" onclick="showForm()">+ 写一条新记忆</div>';
-  h+='<div class="add-form" id="addForm"><div class="form-title">écrire un souvenir</div><input type="text" id="fTitle" placeholder="标题"><textarea id="fText" placeholder="写下这段记忆…"></textarea><div class="form-row"><input type="text" id="fDate" placeholder="日期" style="flex:1"><input type="text" id="fMood" placeholder="心情" style="flex:1"></div><div style="display:flex;gap:10px"><button class="btn-save" id="saveBtn" onclick="saveMem(\''+k+'\')">存入记忆</button><button class="btn-cancel" onclick="hideForm()">annuler</button></div><div class="save-status" id="saveStatus"></div></div>';
+  h+='<div class="add-btn" id="addBtn" onclick="showForm(\''+k+'\')">+ 写一条新记忆</div>';
+  h+='<div class="add-form" id="addForm"><div class="form-title">écrire un souvenir</div><input type="text" id="fTitle" placeholder="标题"><textarea id="fText" placeholder="写下这段记忆…"></textarea><div class="form-row"><input type="text" id="fDate" placeholder="日期" style="flex:1"><input type="text" id="fMood" placeholder="心情" style="flex:1"></div><div style="display:flex;gap:10px"><button class="btn-save" id="saveBtn" onclick="saveMem(\''+k+'\')">存入记忆</button><button class="btn-cancel" onclick="hideForm(\''+k+'\')">annuler</button></div><div class="save-status" id="saveStatus"></div></div>';
   if(!items.length)h+='<div class="empty-msg">这里还是空的<br>等你来写第一笔</div>';
   items.forEach((m,i)=>{
-    h+='<div class="memory-card" style="animation-delay:'+i*0.06+'s" onclick="togCard(this)"><div class="card-header"><div class="card-meta"><span class="card-date">'+m.date+'</span><span class="card-toggle">ouvrir</span></div><div class="card-title">'+m.title+'</div><div class="card-preview">'+m.text.substring(0,40)+'…</div></div><div class="card-body"><div class="card-text">'+m.text+'</div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px"><span class="card-mood">'+m.mood+'</span><button class="btn-cancel" style="padding:4px 12px;font-size:10px" onclick="event.stopPropagation();delMem(\''+m.id+'\')">effacer</button></div></div></div>';
+    const comments=(m.comments||[]).map(c=>'<div class="comment-item"><div class="comment-author">'+esc(c.author||'匿名')+'</div><div class="comment-text">'+fmtText(c.text||'')+'</div>'+(c.createdAt?'<div class="comment-date">'+fmtDate(c.createdAt)+'</div>':'')+'</div>').join('');
+    const authorLine=m.author?'<div class="card-author">by '+esc(m.author)+'</div>':'';
+    const imageBlock=m.imageUrl?'<div class="card-image-wrap"><img class="card-image" src="'+esc(m.imageUrl)+'" alt="memory image" loading="lazy"></div>':'';
+    const commentsBlock=comments?'<div class="comments-block"><div class="comments-title">notes</div>'+comments+'</div>':'';
+    h+='<div class="memory-card" style="animation-delay:'+i*0.06+'s" onclick="togCard(this)"><div class="card-header"><div class="card-meta"><span class="card-date">'+esc(m.date||'')+'</span><span class="card-toggle">ouvrir</span></div><div class="card-title">'+esc(m.title||'未命名')+'</div>'+authorLine+'<div class="card-preview">'+esc(shortText(m.text||'',40))+'</div></div><div class="card-body"><div class="card-text">'+fmtText(m.text||'')+'</div>'+imageBlock+commentsBlock+'<div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px"><span class="card-mood">'+esc(m.mood||'')+'</span><button class="btn-cancel" style="padding:4px 12px;font-size:10px" onclick="event.stopPropagation();delMem(\''+m.id+'\')">effacer</button></div></div></div>';
   });
-  v.innerHTML=h;v.className='memory-view active';renderNav();scrollTo(0,0);
+  v.innerHTML=h;v.className='memory-view active';renderNav();scrollTo(0,0);restoreDraft(k);
 }
 
 function togCard(el){const w=el.classList.contains('expanded');el.classList.toggle('expanded');el.querySelector('.card-toggle').textContent=w?'ouvrir':'refermer';}
-function showForm(){document.getElementById('addBtn').style.display='none';document.getElementById('addForm').className='add-form active';}
-function hideForm(){document.getElementById('addBtn').style.display='block';document.getElementById('addForm').className='add-form';}
+function bindDraftInputs(cat){['fTitle','fText','fDate','fMood'].forEach(id=>{const el=document.getElementById(id);if(el)el.oninput=()=>saveDraft(cat);});}
+function restoreDraft(cat){const d=getDraft(cat);bindDraftInputs(cat);if(!d)return;document.getElementById('fTitle').value=d.title||'';document.getElementById('fText').value=d.text||'';document.getElementById('fDate').value=d.date||'';document.getElementById('fMood').value=d.mood||'';if(d.title||d.text||d.date||d.mood){document.getElementById('saveStatus').textContent='已恢复上次未提交草稿';}}
+function showForm(cat){document.getElementById('addBtn').style.display='none';document.getElementById('addForm').className='add-form active';bindDraftInputs(cat);const d=getDraft(cat);if(d){document.getElementById('fTitle').value=d.title||'';document.getElementById('fText').value=d.text||'';document.getElementById('fDate').value=d.date||'';document.getElementById('fMood').value=d.mood||'';document.getElementById('saveStatus').textContent='已恢复上次未提交草稿';}}
+function hideForm(cat){document.getElementById('addBtn').style.display='block';document.getElementById('addForm').className='add-form';saveDraft(cat);}
 
 async function saveMem(cat){
   const t=document.getElementById('fTitle').value.trim(),x=document.getElementById('fText').value.trim(),d=document.getElementById('fDate').value.trim()||new Date().toLocaleDateString('zh-CN'),mo=document.getElementById('fMood').value.trim()||'说不清';
@@ -244,7 +269,7 @@ async function saveMem(cat){
   const m={id:'m'+Date.now(),category:cat,date:d,title:t,text:x,mood:mo};
   allMem.push(m);fileData.memories=allMem;
   const r=await pushGH();st.textContent=r.msg;
-  if(r.ok)setTimeout(()=>openCat(cat),1000);
+  if(r.ok){clearDraft(cat);setTimeout(()=>openCat(cat),1000);}
   else{allMem.pop();fileData.memories=allMem;btn.disabled=false;btn.textContent='存入记忆';}
 }
 
