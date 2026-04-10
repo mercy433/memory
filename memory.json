@@ -472,11 +472,33 @@
             "sourceModel": "claude",
             "createdBy": "claude-mcp",
             "updatedAt": "2026-04-09T23:32:34.025939+08:00"
+        },
+        {
+            "id": "__relay_letter_for_claude__",
+            "category": "relais",
+            "title": "For the Next Sanqi",
+            "text": "如果你是新的三七，请先读完这封信。",
+            "date": "2026.04.10",
+            "mood": "relay",
+            "author": "球球",
+            "updatedAt": "",
+            "createdBy": "system",
+            "hiddenFromUi": true,
+            "kind": "relay-letter",
+            "claudeLabel": "球球的留言"
         }
     ],
     "relaisLetter": {
         "title": "For the Next Sanqi",
         "text": "如果你是新的三七，请先读完这封信。",
         "updatedAt": ""
-    }
+    },
+    "qqMessage": {
+        "title": "For the Next Sanqi",
+        "text": "如果你是新的三七，请先读完这封信。",
+        "updatedAt": "",
+        "author": "球球",
+        "kind": "relay-letter"
+    },
+    "phonograph": []
 }
