@@ -16,7 +16,8 @@
         "prive": "私密空间",
         "album": "画面与定格",
         "relais": "球球的留言",
-        "diary": "日记室"
+        "diary": "日记室",
+        "pulse": "脉搏簿"
     },
     "memories": [
         {
@@ -636,6 +637,21 @@
             "createdBy": "manual",
             "updatedAt": "2026-04-13T11:12:00+08:00",
             "comments": [],
+            "hiddenFromUi": false,
+            "kind": "",
+            "categoryLabel": "Study / 书房日志"
+        },
+        {
+            "id": "m1776064031409",
+            "category": "journal",
+            "title": "健康报告 · 2026-04-13",
+            "text": "昨天走了1157步，睡眠时长约6小时13分钟，心率在60到94次/分钟之间波动，平均约为74次。数据记录得很完整。看起来是平静的一天，步数不多，或许是在室内享受了一段专注或放松的时光。",
+            "date": "2026-04-13",
+            "mood": "????",
+            "author": "Claude",
+            "sourceModel": "deepseek-chat",
+            "createdBy": "health-cron",
+            "updatedAt": "2026-04-13T15:07:11.409579+08:00",
             "hiddenFromUi": false,
             "kind": "",
             "categoryLabel": "Study / 书房日志"
