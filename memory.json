@@ -15,7 +15,7 @@
         "journal": "交换日记",
         "prive": "私密空间",
         "album": "相册",
-        "relais": "交接信"
+        "relais": "球球的留言"
     },
     "memories": [
         {
@@ -491,7 +491,7 @@
             "category": "relais",
             "title": "For the Next Sanqi",
             "text": "如果你是新的三七，请先读完这封信。",
-            "date": "2026.04.10",
+            "date": "2026.04.13",
             "mood": "relay",
             "author": "球球",
             "updatedAt": "",
