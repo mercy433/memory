@@ -26,7 +26,7 @@
             "date": "2026-04-12",
             "author": "三七",
             "category": "diary",
-            "categoryLabel": "???",
+            "categoryLabel": "日记室",
             "mood": "安静",
             "sourceModel": "deepseek",
             "createdBy": "cron",
@@ -58,7 +58,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m002",
@@ -81,7 +81,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m003",
@@ -104,7 +104,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "厨房日常"
         },
         {
             "id": "m004",
@@ -127,7 +127,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m005",
@@ -150,7 +150,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "???"
+            "categoryLabel": "名场面"
         },
         {
             "id": "m006",
@@ -173,7 +173,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "???"
+            "categoryLabel": "名场面"
         },
         {
             "id": "m008",
@@ -196,7 +196,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m009",
@@ -219,7 +219,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m010",
@@ -242,7 +242,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m011",
@@ -265,7 +265,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m012",
@@ -288,7 +288,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m1775406406477",
@@ -311,7 +311,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775406663237",
@@ -334,7 +334,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775455597611",
@@ -357,7 +357,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775455692965",
@@ -380,7 +380,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775651265922",
@@ -404,7 +404,7 @@
             ],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "?????"
+            "categoryLabel": "球球的留言"
         },
         {
             "id": "m1775651635007",
@@ -428,7 +428,7 @@
             "hiddenFromUi": false,
             "sourceModel": "",
             "kind": "",
-            "categoryLabel": "???"
+            "categoryLabel": "留言板"
         },
         {
             "id": "m1775652859809",
@@ -451,7 +451,7 @@
             ],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775665053049",
@@ -475,7 +475,7 @@
             "imageUrl": "",
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775692100019",
@@ -491,7 +491,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "厨房日常"
         },
         {
             "id": "m1775702166398",
@@ -507,7 +507,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "???"
+            "categoryLabel": "日记室"
         },
         {
             "id": "m1775744797049",
@@ -523,7 +523,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "???"
+            "categoryLabel": "日记室"
         },
         {
             "id": "m1775747236508",
@@ -539,7 +539,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "???"
+            "categoryLabel": "日记室"
         },
         {
             "id": "m1775747343156",
@@ -556,7 +556,7 @@
             "hiddenFromUi": false,
             "sourceModel": "",
             "kind": "",
-            "categoryLabel": "?????"
+            "categoryLabel": "画面与定格"
         },
         {
             "id": "m1775747920228",
@@ -572,7 +572,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m1775748403367",
@@ -588,7 +588,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "????"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775748754025",
@@ -604,7 +604,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "???"
+            "categoryLabel": "名场面"
         },
         {
             "id": "m1775888250637",
@@ -620,7 +620,7 @@
             "hiddenFromUi": false,
             "kind": "",
             "comments": [],
-            "categoryLabel": "????"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m1776010507923",
@@ -636,7 +636,7 @@
             "hiddenFromUi": false,
             "kind": "",
             "comments": [],
-            "categoryLabel": "???"
+            "categoryLabel": "日记室"
         },
         {
             "id": "__relay_letter_for_claude__",
@@ -652,7 +652,7 @@
             "kind": "relay-letter",
             "claudeLabel": "球球的留言",
             "comments": [],
-            "categoryLabel": "?????"
+            "categoryLabel": "球球的留言"
         }
     ],
     "relaisLetter": {
