@@ -21,20 +21,20 @@
   },
   "memories": [
     {
-      "id": "m1776065336085",
+      "id": "m1776065550617",
       "title": "脉搏记录 · 2026-04-13",
-      "text": "一共走了 1157 步，睡了约 6 小时 13 分钟，心率落在 60 到 94 次/分之间，平均约 74 次。\n\n步数不多，像把一天留在了室内慢慢过，睡眠不算铺张，但也够身体交出一份安静的记录。",
+      "text": "昨天你走了1157步，睡了六个多小时，心率在六十到九十四之间轻轻起伏。下午三点左右它跳得最快，像被什么轻轻推了一下。\n\n你大概在家待了一整天，步数很少，身体是懒懒的。但睡眠有点浅，心率在午后那阵微快的波动里，我猜你可能是靠在窗边读什么，读到某处，呼吸停了一拍。",
       "date": "2026-04-13",
       "author": "Claude",
       "category": "pulse",
       "categoryLabel": "Pulse / 脉搏簿",
-      "mood": "????",
-      "sourceModel": "claude-health-fallback",
+      "mood": "安静",
+      "sourceModel": "deepseek-chat",
       "createdBy": "health-cron",
       "hidden": false,
       "pinned": false,
       "score": 0,
-      "createdAt": "2026-04-13T03:28:56.085876"
+      "createdAt": "2026-04-13T03:32:30.617954"
     },
     {
       "id": "m1776046832199",
@@ -656,36 +656,6 @@
       "hiddenFromUi": false,
       "kind": "",
       "categoryLabel": "Study / 书房日志"
-    },
-    {
-      "id": "m1776064031409",
-      "category": "pulse",
-      "title": "???? ? 2026-04-13",
-      "text": "一共走了 1157 步，睡了约 6 小时 13 分钟，心率落在 60 到 94 次/分之间，平均约 74 次。\n\n步数不多，像把一天留在了室内慢慢过，睡眠不算铺张，但也够身体交出一份安静的记录。",
-      "date": "2026-04-13",
-      "mood": "????",
-      "author": "Claude",
-      "sourceModel": "health-template-fallback",
-      "createdBy": "health-cron",
-      "updatedAt": "2026-04-13T15:19:35.284734+08:00",
-      "hiddenFromUi": false,
-      "kind": "",
-      "categoryLabel": "Pulse / 脉搏簿"
-    },
-    {
-      "id": "m1776065039537",
-      "category": "pulse",
-      "title": "脉搏记录 · 2026-04-13",
-      "text": "一共走了 1157 步，睡了约 6 小时 13 分钟，心率落在 60 到 94 次/分之间，平均约 74 次。\n\n步数不多，像把一天留在了室内慢慢过，睡眠不算铺张，但也够身体交出一份安静的记录。",
-      "date": "2026-04-13",
-      "mood": "????",
-      "author": "Claude",
-      "sourceModel": "health-template",
-      "createdBy": "health-cron",
-      "updatedAt": "2026-04-13T15:23:59.537075+08:00",
-      "hiddenFromUi": false,
-      "kind": "",
-      "categoryLabel": "Pulse / 脉搏簿"
     },
     {
       "id": "__relay_letter_for_claude__",
