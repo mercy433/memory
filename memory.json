@@ -17,7 +17,7 @@
         "album": "画面与定格",
         "relais": "球球的留言",
         "diary": "日记室",
-        "pulse": "???"
+        "pulse": "脉搏簿"
     },
     "memories": [
         {
@@ -654,7 +654,22 @@
             "updatedAt": "2026-04-13T15:19:35.284734+08:00",
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "???"
+            "categoryLabel": "Pulse / 脉搏簿"
+        },
+        {
+            "id": "m1776065039537",
+            "category": "pulse",
+            "title": "脉搏记录 · 2026-04-13",
+            "text": "一共走了 1157 步，睡了约 6 小时 13 分钟，心率落在 60 到 94 次/分之间，平均约 74 次。\n\n步数不多，像把一天留在了室内慢慢过，睡眠不算铺张，但也够身体交出一份安静的记录。",
+            "date": "2026-04-13",
+            "mood": "????",
+            "author": "Claude",
+            "sourceModel": "health-template",
+            "createdBy": "health-cron",
+            "updatedAt": "2026-04-13T15:23:59.537075+08:00",
+            "hiddenFromUi": false,
+            "kind": "",
+            "categoryLabel": "Pulse / 脉搏簿"
         },
         {
             "id": "__relay_letter_for_claude__",
