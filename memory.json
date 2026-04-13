@@ -651,7 +651,8 @@
             "updatedAt": "2026-04-13T11:12:00+08:00",
             "comments": [],
             "hiddenFromUi": false,
-            "kind": ""
+            "kind": "",
+            "categoryLabel": "书房日志"
         }
     ],
     "relaisLetter": {
