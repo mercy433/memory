@@ -644,14 +644,14 @@
         {
             "id": "m1776064031409",
             "category": "pulse",
-            "title": "健康报告 · 2026-04-13",
-            "text": "昨天走了1157步，睡眠时长约6小时13分钟，心率在60到94次/分钟之间波动，平均约为74次。数据记录得很完整。看起来是平静的一天，步数不多，或许是在室内享受了一段专注或放松的时光。",
+            "title": "???? ? 2026-04-13",
+            "text": "一共走了 1157 步，睡了约 6 小时 13 分钟，心率落在 60 到 94 次/分之间，平均约 74 次。\n\n步数不多，像把一天留在了室内慢慢过，睡眠不算铺张，但也够身体交出一份安静的记录。",
             "date": "2026-04-13",
             "mood": "????",
             "author": "Claude",
-            "sourceModel": "deepseek-chat",
+            "sourceModel": "health-template-fallback",
             "createdBy": "health-cron",
-            "updatedAt": "2026-04-13T15:07:11.409579+08:00",
+            "updatedAt": "2026-04-13T15:19:35.284734+08:00",
             "hiddenFromUi": false,
             "kind": "",
             "categoryLabel": "???"
