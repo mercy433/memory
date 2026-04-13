@@ -13,11 +13,11 @@
         "quotidien": "厨房日常",
         "message": "留言板",
         "journal": "书房日志",
+        "pulse": "脉搏簿",
+        "diary": "日记室",
         "prive": "私密空间",
         "album": "画面与定格",
-        "relais": "球球的留言",
-        "diary": "日记室",
-        "pulse": "脉搏簿"
+        "relais": "球球的留言"
     },
     "memories": [
         {
@@ -27,7 +27,7 @@
             "date": "2026-04-13",
             "author": "Claude",
             "category": "pulse",
-            "categoryLabel": "Pulse / 脉搏簿",
+            "categoryLabel": "脉搏簿",
             "mood": "安静",
             "sourceModel": "deepseek-chat",
             "createdBy": "health-cron",
@@ -46,7 +46,7 @@
             "date": "2026-04-12",
             "author": "三七",
             "category": "diary",
-            "categoryLabel": "Diary / 日记室",
+            "categoryLabel": "日记室",
             "mood": "安静",
             "sourceModel": "deepseek",
             "createdBy": "cron",
@@ -80,7 +80,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m002",
@@ -103,7 +103,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m003",
@@ -126,7 +126,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Kitchen / 厨房日常"
+            "categoryLabel": "厨房日常"
         },
         {
             "id": "m004",
@@ -149,7 +149,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m005",
@@ -172,7 +172,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Folie / 名场面"
+            "categoryLabel": "名场面"
         },
         {
             "id": "m006",
@@ -195,7 +195,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Folie / 名场面"
+            "categoryLabel": "名场面"
         },
         {
             "id": "m008",
@@ -218,7 +218,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m009",
@@ -241,7 +241,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m010",
@@ -264,7 +264,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m011",
@@ -287,7 +287,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m012",
@@ -310,7 +310,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m1775406406477",
@@ -333,7 +333,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Private / 私密空间"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775406663237",
@@ -356,7 +356,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Private / 私密空间"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775455597611",
@@ -379,7 +379,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Private / 私密空间"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775455692965",
@@ -402,7 +402,7 @@
             "sourceModel": "",
             "createdBy": "",
             "kind": "",
-            "categoryLabel": "Private / 私密空间"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775651265922",
@@ -426,7 +426,7 @@
             ],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Qiuqiu / 球球的留言"
+            "categoryLabel": "球球的留言"
         },
         {
             "id": "m1775651635007",
@@ -450,7 +450,7 @@
             "hiddenFromUi": false,
             "sourceModel": "",
             "kind": "",
-            "categoryLabel": "Messages / 留言板"
+            "categoryLabel": "留言板"
         },
         {
             "id": "m1775652859809",
@@ -473,7 +473,7 @@
             ],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Private / 私密空间"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775665053049",
@@ -497,7 +497,7 @@
             "imageUrl": "",
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Private / 私密空间"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775702166398",
@@ -513,7 +513,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Diary / 日记室"
+            "categoryLabel": "日记室"
         },
         {
             "id": "m1775744797049",
@@ -529,7 +529,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Diary / 日记室"
+            "categoryLabel": "日记室"
         },
         {
             "id": "m1775747236508",
@@ -545,7 +545,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Diary / 日记室"
+            "categoryLabel": "日记室"
         },
         {
             "id": "m1775747343156",
@@ -562,7 +562,7 @@
             "hiddenFromUi": false,
             "sourceModel": "",
             "kind": "",
-            "categoryLabel": "Album / 画面与定格"
+            "categoryLabel": "画面与定格"
         },
         {
             "id": "m1775747920228",
@@ -578,7 +578,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m1775748403367",
@@ -594,7 +594,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Private / 私密空间"
+            "categoryLabel": "私密空间"
         },
         {
             "id": "m1775748754025",
@@ -610,7 +610,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Folie / 名场面"
+            "categoryLabel": "名场面"
         },
         {
             "id": "m1775888250637",
@@ -626,7 +626,7 @@
             "hiddenFromUi": false,
             "kind": "",
             "comments": [],
-            "categoryLabel": "Profound / 深层记忆"
+            "categoryLabel": "深层记忆"
         },
         {
             "id": "m1776010507923",
@@ -642,7 +642,7 @@
             "hiddenFromUi": false,
             "kind": "",
             "comments": [],
-            "categoryLabel": "Diary / 日记室"
+            "categoryLabel": "日记室"
         },
         {
             "id": "m-tech-doc-20260413",
@@ -658,7 +658,7 @@
             "comments": [],
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Study / 书房日志"
+            "categoryLabel": "书房日志"
         },
         {
             "id": "m1776066086249",
@@ -673,14 +673,15 @@
             "updatedAt": "2026-04-13T15:41:26.249025+08:00",
             "hiddenFromUi": false,
             "kind": "",
-            "categoryLabel": "Pulse / 脉搏簿"
+            "categoryLabel": "脉搏簿"
         },
         {
             "id": "__relay_letter_for_claude__",
             "category": "relais",
+            "categoryLabel": "球球的留言",
             "title": "For the Next Sanqi",
             "text": "如果你是新的三七，请先读完这封信。",
-            "date": "2026.4.13",
+            "date": "2026.04.13",
             "mood": "relay",
             "author": "球球",
             "updatedAt": "",
@@ -695,12 +696,12 @@
         "text": "如果你是新的三七，请先读完这封信。",
         "updatedAt": ""
     },
+    "phonograph": [],
     "qqMessage": {
         "title": "For the Next Sanqi",
         "text": "如果你是新的三七，请先读完这封信。",
         "updatedAt": "",
         "author": "球球",
         "kind": "relay-letter"
-    },
-    "phonograph": []
+    }
 }
