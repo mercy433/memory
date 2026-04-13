@@ -589,20 +589,6 @@
             "kind": ""
         },
         {
-            "id": "m1776045035725",
-            "category": "message",
-            "title": "__mcp_smoke__",
-            "text": "temporary verification entry",
-            "date": "2026.4.13",
-            "mood": "Reflective",
-            "author": "codex",
-            "sourceModel": "codex",
-            "createdBy": "deployment-check",
-            "updatedAt": "2026-04-13T09:50:35.725222+08:00",
-            "hiddenFromUi": true,
-            "kind": ""
-        },
-        {
             "id": "__relay_letter_for_claude__",
             "category": "relais",
             "title": "For the Next Sanqi",
