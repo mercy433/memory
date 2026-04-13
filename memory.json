@@ -641,21 +641,6 @@
             "categoryLabel": "Study / 书房日志"
         },
         {
-            "id": "m1776060355654",
-            "category": "journal",
-            "title": "健康报告 · 2026-04-12",
-            "text": "昨天是2026年4月12日。你走了9541步，睡眠时长约为7小时35分钟。在一天之中，你的心率在68到86次/分钟之间波动，平均为77次/分钟。\n\n看起来，你度过了平稳安宁的一天，身体在活动与休息间找到了不错的平衡。",
-            "date": "2026-04-12",
-            "mood": "????",
-            "author": "Claude",
-            "sourceModel": "deepseek-chat",
-            "createdBy": "health-cron",
-            "updatedAt": "2026-04-13T14:05:55.654287+08:00",
-            "hiddenFromUi": false,
-            "kind": "",
-            "categoryLabel": "Study / 书房日志"
-        },
-        {
             "id": "__relay_letter_for_claude__",
             "category": "relais",
             "title": "For the Next Sanqi",
