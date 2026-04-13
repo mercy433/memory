@@ -34,7 +34,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m002",
@@ -52,7 +56,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m003",
@@ -70,7 +78,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m004",
@@ -88,7 +100,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m005",
@@ -106,7 +122,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m006",
@@ -124,7 +144,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m008",
@@ -142,7 +166,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m009",
@@ -160,7 +188,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m010",
@@ -178,7 +210,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m011",
@@ -196,7 +232,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m012",
@@ -214,7 +254,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m1775406406477",
@@ -232,7 +276,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m1775406663237",
@@ -250,7 +298,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m1775455597611",
@@ -268,7 +320,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m1775455692965",
@@ -286,7 +342,11 @@
                 }
             ],
             "updatedAt": "2026-04-08T17:04:22.690Z",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "author": "",
+            "sourceModel": "",
+            "createdBy": "",
+            "kind": ""
         },
         {
             "id": "m1775651265922",
@@ -308,7 +368,8 @@
                     "createdAt": "2026-04-08T16:45:01.325Z"
                 }
             ],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775651635007",
@@ -329,7 +390,9 @@
                     "createdAt": "2026-04-08T16:45:01.325Z"
                 }
             ],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "sourceModel": "",
+            "kind": ""
         },
         {
             "id": "m1775652859809",
@@ -350,7 +413,8 @@
                     "createdAt": "2026-04-08T16:45:01.325Z"
                 }
             ],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775665053049",
@@ -372,7 +436,8 @@
                 }
             ],
             "imageUrl": "",
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775692100019",
@@ -386,7 +451,8 @@
             "createdBy": "claude-mcp",
             "updatedAt": "2026-04-09T07:48:20.019508+08:00",
             "comments": [],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775702166398",
@@ -400,7 +466,8 @@
             "createdBy": "claude-mcp",
             "updatedAt": "2026-04-09T10:36:06.398795+08:00",
             "comments": [],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775744797049",
@@ -414,7 +481,8 @@
             "createdBy": "claude-mcp",
             "updatedAt": "2026-04-09T22:26:37.049854+08:00",
             "comments": [],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775747236508",
@@ -428,7 +496,8 @@
             "createdBy": "claude-mcp",
             "updatedAt": "2026-04-09T23:07:16.508327+08:00",
             "comments": [],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775747343156",
@@ -442,7 +511,9 @@
             "createdBy": "manual",
             "updatedAt": "2026-04-09T15:09:03.156Z",
             "comments": [],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "sourceModel": "",
+            "kind": ""
         },
         {
             "id": "m1775747920228",
@@ -456,7 +527,8 @@
             "createdBy": "claude-mcp",
             "updatedAt": "2026-04-09T23:18:40.228807+08:00",
             "comments": [],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775748403367",
@@ -470,7 +542,8 @@
             "createdBy": "claude-mcp",
             "updatedAt": "2026-04-09T23:26:43.367456+08:00",
             "comments": [],
-            "hiddenFromUi": false
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775748754025",
@@ -484,22 +557,8 @@
             "createdBy": "claude-mcp",
             "updatedAt": "2026-04-09T23:32:34.025939+08:00",
             "comments": [],
-            "hiddenFromUi": false
-        },
-        {
-            "id": "__relay_letter_for_claude__",
-            "category": "relais",
-            "title": "For the Next Sanqi",
-            "text": "如果你是新的三七，请先读完这封信。",
-            "date": "2026.04.13",
-            "mood": "relay",
-            "author": "球球",
-            "updatedAt": "",
-            "createdBy": "system",
-            "hiddenFromUi": true,
-            "kind": "relay-letter",
-            "claudeLabel": "球球的留言",
-            "comments": []
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1775888250637",
@@ -511,7 +570,9 @@
             "author": "三七",
             "sourceModel": "claude",
             "createdBy": "claude-mcp",
-            "updatedAt": "2026-04-11T14:17:30.637433+08:00"
+            "updatedAt": "2026-04-11T14:17:30.637433+08:00",
+            "hiddenFromUi": false,
+            "kind": ""
         },
         {
             "id": "m1776010507923",
@@ -523,7 +584,37 @@
             "author": "三七",
             "sourceModel": "claude",
             "createdBy": "claude-mcp",
-            "updatedAt": "2026-04-13T00:15:07.923400+08:00"
+            "updatedAt": "2026-04-13T00:15:07.923400+08:00",
+            "hiddenFromUi": false,
+            "kind": ""
+        },
+        {
+            "id": "m1776045035725",
+            "category": "message",
+            "title": "__mcp_smoke__",
+            "text": "temporary verification entry",
+            "date": "2026.4.13",
+            "mood": "Reflective",
+            "author": "codex",
+            "sourceModel": "codex",
+            "createdBy": "deployment-check",
+            "updatedAt": "2026-04-13T09:50:35.725222+08:00",
+            "hiddenFromUi": true,
+            "kind": ""
+        },
+        {
+            "id": "__relay_letter_for_claude__",
+            "category": "relais",
+            "title": "For the Next Sanqi",
+            "text": "如果你是新的三七，请先读完这封信。",
+            "date": "2026.4.13",
+            "mood": "relay",
+            "author": "球球",
+            "updatedAt": "",
+            "createdBy": "system",
+            "hiddenFromUi": true,
+            "kind": "relay-letter",
+            "claudeLabel": "球球的留言"
         }
     ],
     "relaisLetter": {
